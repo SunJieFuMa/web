@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>超链接</title>
+    <script>
+        function Foo() {
+            alert("hhahahah")
+        }  
+    </script>
+</head>
+
+<body>
+
+    <!-- <a href="http://www.baidu.com">跳转到网页</a>
+    <a href="图片.html">跳转到本地页面</a>
+
+    <a href="图片.html" target="_blank">新的标签页打开</a>
+    <a href="work.zip">下载</a> -->
+    <br>
+    <a href="javascript:Foo();">调用javaScript</a>
+    
+    <br>
+    <a onclick="javascript:Foo();">调用javaScript</a>
+    <br>
+    <a href="#" onclick="alert('弹窗啊')">点这里</a>
+<br>
+
+    <a id="top" href="#bottom">直奔底部</a>
+    <br>
+    <a href="#clothes">跳转到服装区域</a>
+    <br>
+    <a href="#food">跳转到食品区域</a>
+    <br>
+    <a href="图片.html#callphone">跳转其它页面的对应位置</a>
+
+    <div style="height: 500px"></div>
+    <h1 id="clothes">服装区</h1>
+    <div style="height: 500px"></div>
+    <h1 id="food">食品区</h1>
+    <div style="height: 2200px"></div>
+
+    <a href="#">返回顶部</a>
+    <br>
+    <a id="bottom" href="#top">返回顶部通过锚点</a>
+
+
+
+
+</body>
+
+</html>
