@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css相邻兄弟选择器</title>
+    <style type="text/css">
+        h1+p {
+            color: red;
+        }
+    </style>
+    
+    <style type="text/css">
+        li+li {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+        <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ol>
+    </div>
+    <h1>This is a heading.</h1>
+    <p>This is paragraph.</p>
+    <p>This is paragraph.</p>
+    <p>This is paragraph.</p>
+    <p>This is paragraph.</p>
+    <p>This is paragraph.</p>
+</body>
+
+</html>

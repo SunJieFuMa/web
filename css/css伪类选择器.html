@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css伪类选择器</title>
+
+    <style type="text/css">
+        #anchor:link {
+            /* link表示链接在正常情况下（即页面刚加载完成时）显示的颜色。 */
+            color: green;
+        }
+
+        #anchor:visited {
+            /* visited表示链接被点击后显示的颜色。 */
+            color: blue;
+        }
+
+        #anchor:hover {
+            /* hover表示鼠标悬停时显示的颜色。 */
+            color: yellow
+        }
+
+        #anchor:focus {
+            /* focus表示元素获得光标焦点时使用的颜色，主要用于文本框输入文字时使用（鼠标松开时显示的颜色） */
+            color: black;
+        }
+
+        #anchor:active {
+            /* active表示当所指元素处于激活状态（鼠标在元素上按下还没有松开）时所显示的颜色 */
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#testtest" id="anchor1">超链接1</a> <br>
+    <a href='#testtest' id='anchor2'>超链接2</a> <br>
+    <a href=#testtest id=anchor3>超链接3</a>  <br>
+</body>
+
+</html>
