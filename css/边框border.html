@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>边框border</title>
+    <style type="text/css">
+    div{
+        width: 50px;
+        background: yellow;
+        text-align: center;
+        font-size: 10px;
+    }
+    .division2{
+        border: 2px none red;
+    }
+    .division3{
+        border: 2px hidden red;
+    }
+    .division4{
+        border: 2px dotted red;
+    }
+    .division5{
+        border: 2px dashed red;
+    }
+    .division6{
+        border: 2px double red;
+    }
+    .division7{
+        border: 2px groove red;
+    }
+    .division8{
+        border: 2px ridge red;
+    }
+    .division9{
+        border: 2px inset red;
+    }
+    .division10{
+        border: 2px outset red;
+    }
+    .division11{
+        border: 2px solid red;
+    }
+
+    .new_division1 ,.new_division2, .new_division3, .new_division4{
+        width: 20px;
+        height: 20px;
+        background: yellow;
+        text-align: center;
+        font-size: 10px;
+    }
+    .new_division1{
+        border: 2px solid red;
+        border-left: 5px solid blue;
+        border-top: 5px solid gray;
+        /* border-right: 5px solid pink; */
+        border-bottom: 5px solid yellow;
+    }
+
+     .new_division2, .new_division3{
+        width: 0px;
+        height: 0px;
+        background: transparent
+    }
+
+    .new_division2{
+        border-bottom: 10px solid red;
+    }
+    .new_division3{
+        border: 10px solid transparent;
+        border-bottom: 10px solid red;
+    }
+
+    .new_division4{
+        width: 50px;
+        height: 50px;
+        background: yellow;
+        border-radius: 50%
+    }
+
+    .new_division5{
+        width: 30px;
+        height: 60px;
+        background: yellow;
+        border:1px solid #999;
+        border-radius: 30px 0px 0px 30px;
+    }
+
+    .new_division6{
+        width: 30px;
+        height: 60px;
+        background: yellow;
+       border-top-left-radius: 30px;
+       border-top-right-radius: 0px;
+       border-bottom-right-radius: 0px;
+       border-bottom-left-radius: 30px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="new_division1"></div><br>
+    <div class="new_division2"></div><br>
+    <div class="new_division3"></div><br>
+    <div class="new_division4"></div><br>
+    <div class="new_division5"></div><br>
+    <div class="new_division6"></div><br>
+    <br>
+    <br>
+    <br>
+
+    <div class="division1"></div><br>
+    <div class="division2">none</div><br>
+    <div class="division3">hidden</div><br>
+    <div class="division4">dotted</div><br>
+    <div class="division5">dashed</div><br>
+    <div class="division6">double</div><br>
+    <div class="division7">groove</div><br>
+    <div class="division8">ridge</div><br>
+    <div class="division9">inset</div><br>
+    <div class="division10">outset</div><br>
+    <div class="division11">solid</div><br>
+</body>
+
+</html>
