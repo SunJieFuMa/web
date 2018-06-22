@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>框模型margin产生的问题</title>
+    <style type="text/css">
+        div{
+            width:200px;
+            height:200px;
+            border:1px solid #999;
+        }
+        #d1{
+            margin-bottom:50px;
+        }
+        #d2{
+            margin-top:40px;
+        }
+        /*上下外边距合并   左右外边距 是相加的 行内元素 无法设置上下外边距*/
+        span{
+            border:1px solid #999;
+        }
+        #s1{
+            margin-top:30px;
+            margin-right:10px;
+        }
+        #s2{
+            margin-left:5px;
+        }
+      </style>
+     </head>
+     <body>
+      <h2>margin会产生的一些问题</h2>
+      <div id="d1"></div>
+      <div id="d2"></div>
+    
+      <span id="s1">1</span><span id="s2">2</span>
+    
+     </body>
+    
+</body>
+</html>

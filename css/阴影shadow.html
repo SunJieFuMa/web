@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阴影shadow</title>
+    <style type="text/css">
+        #d1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #999;
+            box-shadow: 20px 20px 20px 20px red inset;
+            /*第一个值阴影的水平位置
+                      第二个值阴影的垂直位置
+                      第三个值 阴影的模糊距离
+                      第四个值 阴影的大小
+                      第五个值 阴影的颜色
+                      第六个值 设置为内阴影或者是外阴影
+                    */
+        }
+
+        p {
+            color: #f00;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #999;
+            margin: 0px;
+            text-align: center;
+            line-height: 200px;
+            text-shadow: 20px 20px 3px  black;
+
+            /*阴影的水平位置
+				  阴影的垂直位置
+				  阴影的模糊距离
+				  阴影的颜色
+				*/
+        }
+    </style>
+</head>
+
+<body>
+    <h2>阴影</h2>
+    <p>我就是我，不一样的烟火</p>
+    <div id="d1"></div>
+</body>
+
+</html>

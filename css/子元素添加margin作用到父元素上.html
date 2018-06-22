@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>子元素添加margin作用到父元素上</title>
+    <style type="text/css">
+        #d1{
+            width:300px;
+            height:200px;
+            background:#f00;
+            /*border:1px solid transparent;*/
+            /*解决方案1*/
+            /*overflow:hidden;*/
+            /*解决方案2*/
+        }
+
+            /*这个是以后最聪明的解决方法*/
+        /* #d1:before{
+            content:"";
+            display:table;
+        } */
+        #d2{
+            width:150px;
+            height:100px;
+            background:#0f0;
+            margin-top:30px;
+            margin-left: 50px;
+        }
+      </style>
+     </head>
+     <body>
+      <div id="d1">
+        <div id="d2"></div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>框模型padding</title>
+</head>
+<body>
+    <style type="text/css">
+        #d1{
+            width:200px;
+            height:200px;
+            border:1px solid #999;
+            padding:20px;
+        }
+        /*padding:  内边距 设置元素的边框 与 内容之间的距离  如果使用了padding 会将元素撑大*/
+        /*框模型 由内到外 分别是  content(内容)  padding(内边距) border(边框) margin(外边距)
+         那些属性 会影响到元素的大小？
+         content padding  border 
+        */
+        /*padding中的取值  一个值 两个值 三个值 四个值 与margin的取值效果一样*/
+    
+        input{
+            height:30px;
+            width:167px;
+            background:url(img/user.jpg) no-repeat;
+            background-size:30px 30px;
+            padding:0;
+            padding-left:33px;
+        }
+      </style>
+     </head>
+     <body>
+      <div id="d1">123</div>
+      <input type="text" />
+</body>
+</html>
