@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景background</title>
+    <style type="text/css">
+        #d1{
+            width:600px;
+            height:200px;
+            border:1px solid #999;
+            background-color:#f00;
+            background-image:url(img/screen.jpg);
+            background-size:200px  ;    
+            /* background-size:50% 20%;     */
+            /* background-size:cover;     */
+            /* background-size:contain;     */
+            /*取值 contain 背景图片的比较短的一边 占满了容器 停止缩放*/
+            /*取值 cover  背景图片比较长的一个边 占满容器 停止缩放 但是 使用此属性 可能会使背景图片显示不全*/
+            /* background-repeat:no-repeat; */
+            /* background-repeat:repeat-x; */
+            /* background-repeat:repeat-y; */
+            background-repeat:no-repeat;
+            /*background-repeat： 背景图片 默认情况 平铺（重复）
+                通常需要给他清除此特性
+            */
+            
+            /* background-attachment:fixed; */
+            /*此属性可以使背景不再根据滚动条的滚动而位移   
+              但是 使用了此属性的元素 会根据body定位 不再根据容器定位
+            */
+            /* background-position:-52px -66px; */
+            /* background-position:20% 6%; */
+            /* background-position:center; */
+            background-position:top right;
+
+            background: green url(img/screen.jpg) top center no-repeat fixed;
+    
+    
+    
+        }
+        #d2{
+        /*雪碧图的用法*/
+            /* width:57px;
+            height:45px;
+            background:red url(img/icon_list.jpg) no-repeat -52px -66px; */
+            /*background-size:; 此值需要单独写  */
+            background-position:-52px -66px;
+        }
+      </style>
+     </head>
+     <body style="height:3000px;">
+      <h2>背景</h2>
+      <!-- <div style="height: 300px;"></div> -->
+      <div id="d1"></div>
+    
+      <div id="d2"></div>
+    
+</body>
+</html>

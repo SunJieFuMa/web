@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>径向渐变</title>
+    <style type="text/css">
+        #d1{
+            width:200px;
+            height:200px;
+            border:1px solid #999;
+            border-radius:50%;
+            background-image:radial-gradient( 50px at left 50px,#f00,#0f0,#00f);
+            /*半径 at 圆心位置，*/
+        }
+        #d2{
+            width:200px;
+            height:200px;
+            border:1px solid #999;
+            background-image:repeating-radial-gradient(#f00 0px,#0f0 20px);
+        }
+      </style>
+     </head>
+     <body>
+      <h2>径向渐变</h2>
+      <div id="d1"></div>
+      <h2>重复径向渐变</h2>
+      <div id="d2"></div>
+</body>
+</html>

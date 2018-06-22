@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>线性渐变</title>
+    <style type="text/css">
+        #d1{
+            width:200px;
+            height:200px;
+            /* 0deg代表 从下到上 90deg代表从左到右  180deg 从上到下 270deg 从右往左 */
+            background-image:linear-gradient(0deg,#f00,#0f0,#ff0,#00f);
+    
+        }
+        #d2{
+            width:300px;
+            height:300px;
+            border:1px solid #999;
+            border-radius:50%;
+            background-image:linear-gradient(90deg,#fff 50%,#000 50%);
+        }
+        #d3{
+            width:200px;
+            height:500px;
+            border:1px solid #999;
+            background-image:repeating-linear-gradient(0deg,#fff 0px,#000 50px);
+        }
+      </style>
+     </head>
+     <body>
+      <h2>线性 渐变</h2>
+      <div id="d1"></div>
+      <div id="d2"></div>
+    
+      <h2>重复线性渐变</h2>
+      <div id="d3"></div>
+    
+</body>
+</html>
