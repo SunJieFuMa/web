@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表样式list-style</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: auto;
+        }
+
+        ol {
+            margin-left: 200px;
+            border: 1px solid red;
+            /* list-style-type: lower-roman; */
+            /* list-style-image: url(img/phone_icon.jpg)  ; */
+        }
+
+        ol li {
+            background: url(img/phone_icon.jpg);
+            background-size: 15px 15px;
+            background-repeat: no-repeat;
+            padding-left: 20px;
+        }
+
+        ul {
+            border: 1px solid red;
+            /* list-style-type: circle;
+            list-style-position: inside; */
+            list-style: circle inside  url(img/phone_icon.jpg);
+        }
+
+        ul li {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <ol>
+        <li>金</li>
+        <li>银</li>
+        <li>铜</li>
+    </ol>
+    <ul>
+        <li>你</li>
+        <li>我</li>
+        <li>他</li>
+    </ul>
+</body>
+
+</html>

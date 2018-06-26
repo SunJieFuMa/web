@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>可见性visibility</title>
+    <style type="text/css">
+        #s1 {
+            color: #f00;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>隐藏与现实</h2>
+    <input type="text" id="inp1" />
+    <p id="s1">您的填写不能为空</p>
+    <button id="bt_login">登录</button>
+
+
+    <script type="text/javascript">
+        var inp1 = document.getElementById("inp1");
+        var bt = document.getElementById("bt_login");
+        var s1 = document.getElementById("s1");
+
+        bt.onclick = function () {
+            if (inp1.value == "") {
+                s1.style.visibility = "visible";
+            } else {
+                s1.style.visibility = "hidden";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
