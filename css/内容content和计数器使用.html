@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内容content</title>
+    <style type="text/css">
+        body {
+            /*在body当中声明多个计数器  计数器的名字是 c1 c2 初始值 0 5*/
+            counter-reset: c1 0 c2 5;
+        }
+
+        div:before {
+            /*使用计数器*/
+            content: "第"counter(c2)"章";
+        }
+
+        div {
+            counter-increment: c1 -1 c2 1;
+            /*设置递增或者递减的值*/
+        }
+    </style>
+</head>
+
+<body>
+    <h2>计数器</h2>
+    <div>《大闹天宫》</div>
+    <div>《三打白骨精》</div>
+    <div>《猪八戒背媳妇》</div>
+    <div>《陈光蕊被害死啦》</div>
+</body>
+
+</html>

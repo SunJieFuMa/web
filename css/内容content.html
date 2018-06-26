@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内容content</title>
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid red;
+        }
+
+        .division1:before {
+            /* content: "之前"; */
+            content: url(img/phone_icon.jpg)
+        }
+
+        .division2:after {
+            content: "之后";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="division1">division1</div>
+    <div class="division2">division2</div>
+</body>
+
+</html>
