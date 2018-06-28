@@ -1,0 +1,15 @@
+/.gradle/
+/.idea/
+build
+*.iml
+*.apk
+local.properties
+.DS_Store
+*.o
+*.d
+obj
+rgbvrShow2D/build.gradle___jb_old___
+release
+debug
+ignore
+output.json
