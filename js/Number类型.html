@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number类型</title>
+    <script>
+        // console.log(Number.MAX_VALUE);
+        // console.log(Number.MIN_VALUE);
+        // console.log(Number.POSITIVE_INFINITY);
+        // console.log(Number.NEGATIVE_INFINITY);
+        // console.log(Number.NaN);
+        // console.log();
+        // console.log(3 / 0);
+        // console.log(-3 / 0);
+        // console.log(0 / 0);
+    </script>
+
+    <!--<script>-->
+    <!--console.log(isNaN(123));-->
+    <!--console.log(isNaN("xxx"));-->
+    <!--console.log(isNaN(Number.NaN));-->
+    <!--var und;-->
+    <!--console.log(isNaN(und + 123));-->
+    <!--console.log(isNaN(und + "yyy"));-->
+    <!--console.log(isNaN(und + false));-->
+    <!--console.log(Number.NaN === Number.NaN)-->
+    <!--console.log(Number.NaN === "NaN")-->
+
+    <!--console.log(Number.NaN+123);-->
+    <!--</script>-->
+    <script>
+
+
+        console.log(Number("123"));
+        console.log(Number("123xxx")); //如果字符串不是一个纯数字序列那么 结果是NaN
+
+        console.log(parseInt("12.3abc"));  // 如果第一个字符是数字会解析知道遇到非数字结束
+        console.log(parseInt("abc123"));  // 如果第一个字符不是数字或者符号就返回NaN
+        console.log(parseInt("123", 16));  // 可以有第二个参数（进制）
+
+
+        console.log(parseFloat("12.3"));    // 没有第二个参数，其余和parseInt一致
+        console.log(parseFloat("a12.3"));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
