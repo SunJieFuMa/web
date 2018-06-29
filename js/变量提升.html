@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量提升</title>
+    <!--<script>-->
+    <!--function foo() {-->
+    <!--console.log(10);-->
+    <!--}-->
+
+    <!--var foo;-->
+    <!--console.log(foo);-->
+    <!--foo = 10;-->
+    <!--console.log(foo);-->
+    <!--console.log(foo);-->
+    <!--</script>-->
+    <!--<script>-->
+    <!--console.log(num);-->
+    <!--var num = 10;-->
+    <!--</script>-->
+    <!---->
+    <!--<script>-->
+    <!--var num;-->
+    <!--console.log(num);-->
+    <!--num = 10;-->
+    <!--</script>-->
+
+    <!--<script>-->
+    <!--foo();-->
+
+    <!--function foo() {-->
+    <!--console.log("aaa")-->
+    <!--}-->
+    <!--</script>-->
+    <!--<script>-->
+    <!--function foo() {-->
+    <!--console.log("aaa")-->
+    <!--}-->
+
+    <!--foo();-->
+    <!--</script>-->
+
+    <!--<script>-->
+    <!--console.log(a);    // f a() {console.log(10)}-->
+    <!--a();           //10-->
+
+    <!--var a = 3;-->
+
+    <!--function a() {-->
+    <!--console.log(10)-->
+    <!--}-->
+
+    <!--console.log(a); //3-->
+    <!--a();        // not a function-->
+    <!--</script>-->
+
+    <!--<script>-->
+    <!--var a = funtion(){-->
+    <!--console.log(10)-->
+    <!--}-->
+    <!--var a;-->
+    <!--console.log(a);    // f a() {console.log(10)}-->
+    <!--a();           // 10-->
+
+    <!--a = 3;-->
+    <!--console.log(a);   //3-->
+    <!--a();          //a() is not a function;-->
+    <!--</script>-->
+
+    <!--<script>-->
+    <!--foo();-->
+
+    <!--function foo() {-->
+    <!--console.log("声明式");-->
+    <!--}-->
+
+    <!--</script>-->
+    <!--<script>-->
+    <!--foo();-->
+    <!--var foo = function () {-->
+    <!--console.log("字面量式")-->
+    <!--}-->
+    <!--</script>-->
+
+    <!--<script>-->
+    <!--var foo;-->
+    <!--foo();-->
+    <!--foo = function () {-->
+    <!--console.log("字面量式")-->
+    <!--}-->
+    <!--</script>-->
+
+    <script>
+        function foo() {
+            console.log(123);
+            k=60;
+        }
+
+        console.log(foo);
+        console.log(foo());
+        console.log(k)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
