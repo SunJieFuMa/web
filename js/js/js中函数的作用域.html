@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中函数的作用域</title>
+    <script>
+        // var globalVariable = "globalVariable";
+        // globalVariable_notVar = "globalVariable_notVar";
+        //
+        // function test() {
+        //     var partVariable = "partVariable";
+        //     globalVariable_notVar2 = "globalVariable_notVar2";
+        // }
+        // test();
+        // console.log(globalVariable);
+        // console.log(globalVariable_notVar);
+        // console.log(globalVariable_notVar2);
+        // console.log(partVariable);
+
+
+        // function test() {
+        //     globalVariable_notVar2 = "globalVariable_notVar2";
+        // }
+        // // test();
+        // console.log(globalVariable_notVar2);
+
+        // function test() {
+        //     var a = 'a', b = 'b', c = 'c';
+        //     var d = 'd'; e = 'e'; f = 'f';
+        //     var g = h = i = 'ghi';
+        // }
+        //
+        // test();
+        // // console.log(a);
+        // // console.log(b);
+        // // console.log(c);
+        // // console.log(d);
+        // console.log(e);
+        // console.log(f);
+        // // console.log(g);
+        // console.log(h);
+        // console.log(i);
+
+        // var str="全局变量";
+        // function test() {
+        //     console.log(str);
+        //     var str="局部变量";
+        // }
+        // test();
+
+        var str = "全局变量";
+        function test() {
+            var str;
+            console.log(str);
+            str = "局部变量";
+        }
+        test();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
