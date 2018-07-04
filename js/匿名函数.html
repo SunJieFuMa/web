@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名函数</title>
+    <script>
+        // function test() {
+        //     console.log("test");
+        // }
+        // console.log(typeof (test));
+
+        // var test=new Function("console.log('test')");
+        // test();
+
+        // var test=function (a, b) {
+        //           console.log(a + b);
+        //       };
+        //
+        //       (function (a, b) {
+        //           console.log(a + b);
+        //       })(5, 6);
+        // var  tag=1;
+        // window.onload = function () {
+        //
+        //     var diviision1 = document.getElementById("divition1");
+        //     diviision1.onclick = function () {
+        //         console.log("我被点击到了"+tag++);
+        //     }
+        // }
+
+        // var tag = 0;
+        // setInterval(function () {
+        //     console.log("定时器" + tag++);
+        // },1000);
+
+        // var test=function () {
+        //     console.log("test");
+        // }
+        //
+        // test();
+
+        // function Person() {
+        //     this.name = "张三";
+        //     this.func = function () {
+        //         console.log("function");
+        //     };
+        // }
+        // var person=new Person();
+        // person.func();
+
+        // //1，匿名函数的第一种实现方式
+        // (function (data) {
+        //     console.log(data);
+        // })("test");
+        // //2.匿名自执行函数的第二种实现方式
+        // (function (data) {
+        //     console.log(data);
+        //
+        // }("test"));
+        // //3.匿名自执行函数的第三种实现方式
+        // !function (data) {
+        //     console.log(data);
+        // }("test");
+        // //4.匿名自执行函数的第四种实现方式
+        // var fun = function (data) {
+        //     console.log(data);
+        // }("test");
+        // var fun1 = function (data) {
+        //     console.log(data);
+        // };
+        // console.log(fun);
+        // console.log(fun1);
+
+        // var num=(function (a, b) {
+        //     return a + b;
+        // }(5, 6));
+        // console.log(num);
+
+    </script>
+
+
+    <script>
+        var tag=0;
+        window.onload = function () {
+
+            var diviision1 = document.getElementById("divition1");
+            diviision1.onclick = function () {
+                console.log("我被点击到了" + tag++);
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="divition1" style="width: 50px; height: 50px; background: #ff0000;">我是div</div>
+</body>
+</html>

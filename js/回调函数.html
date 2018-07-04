@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回调函数</title>
+    <script>
+        // function callback() {
+        //     console.log("我是回调函数");
+        // }
+        //
+        // function main(func) {
+        //     console.log("我是主函数");
+        //     func();
+        // }
+        //
+        // main(callback);
+
+        // function operationf(a, b, mode) {
+        //     switch (mode) {
+        //         case '+':
+        //             return a + b;
+        //         case '-':
+        //             return a - b;
+        //         case '*':
+        //             return a * b;
+        //         case '/':
+        //             return a / b;
+        //         default:
+        //             return "不会";
+        //     }
+        // }
+        //
+        // console.log(operationf(5, 6, "+"));
+        // console.log(operationf(5, 6, "-"));
+
+        // function plus(a, b) {
+        //     return a + b;
+        // }
+        //
+        // function minus(a, b) {
+        //     return a - b;
+        // }
+        //
+        // function ride(a, b) {
+        //     return a * b;
+        // }
+        //
+        // function chu(a, b) {
+        //     return a / b;
+        // }
+        //
+        // function operation(a, b, mode) {
+        //     return mode(a, b);
+        // }
+        // console.log(operation(5, 6, plus));
+        // console.log(operation(5, 6, minus));
+
+        function operation(a, b, mode) {
+            return mode(a, b);
+        }
+
+        var num = operation(5, 6, function(a, b) {
+            return a + b;
+        });
+        console.log(num);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
