@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的扩展</title>
+    <script>
+        // let name = "张三";
+        // let per = {name};
+        // console.log(per); //  {name : "张三"}
+        // // 等同于
+        // let per1 = {name: name};
+        // console.log(per1);//  {name : "张三"}
+
+        // let per = {
+        //     skill() {
+        //         console.log("我可以种地");
+        //     }
+        // };
+        // per.skill();  // 我可以种地
+        //
+        // // 等同于
+        // let per1 = {
+        //     skill: function () {
+        //         console.log("我可以种地");
+        //     }
+        // };
+        // per1.skill();  // 我可以种地
+
+        // let cart = {
+        //     _wheels: 4,
+        //
+        //     getwheels() {
+        //         return this._wheels;
+        //     },
+        //
+        //     setwheels(value) {
+        //         if (value < this._wheels) {
+        //             throw new Error('数值太小了！');
+        //         }
+        //         this._wheels = value;
+        //     }
+        // };
+        //
+        // console.log(cart.getwheels()); // 4
+
+        // const target = { a: 1 };
+        //
+        // const source1 = { b: 2 };
+        // const source2 = { c: 3 };
+        //
+        // Object.assign(target, source1, source2);
+        // console.log(target); // {a:1, b:2, c:3}
+
+        // let breakfast = {
+        //     getDrink() {
+        //         return "豆浆";
+        //     }
+        // };
+        // let dinner = {
+        //     getDrink() {
+        //         return "片儿汤";
+        //     }
+        // };
+        //
+        // let sunday = {
+        //     __proto__: breakfast
+        // };
+        //
+        // console.log(sunday.getDrink());  // 豆浆
+        // console.log(Object.getPrototypeOf(sunday) === breakfast); // true
+        // sunday.__proto__=dinner;
+        // console.log(sunday.getDrink()); // 片儿汤
+        // console.log(Object.getPrototypeOf(sunday) === dinner);  // true
+
+        // let breakfast = {
+        //     getDrink() {
+        //         return "豆浆";
+        //     }
+        // };
+        // let dinner = {
+        //     getDrink() {
+        //         return "片儿汤";
+        //     }
+        // };
+        //
+        // let sunday = Object.create(breakfast);
+        // console.log(sunday.getDrink());  // 豆浆
+        // console.log(Object.getPrototypeOf(sunday) === breakfast); // true
+        // Object.setPrototypeOf(sunday,dinner);
+        // console.log(sunday.getDrink()); // 片儿汤
+        // console.log(Object.getPrototypeOf(sunday) === dinner);  // true
+
+        // const proto = {
+        //     foo: 'hello'
+        // };
+        //
+        // const obj = {
+        //     __proto__: proto,
+        //     foo: 'world',
+        //     find() {
+        //         return super.foo;
+        //     }
+        // };
+        //
+        // console.log(obj.find()) // "hello"
+
+        // 报错
+        // const obj = {
+        //     foo: super.foo
+        // };
+        // console.log(obj.foo);
+
+        // 报错
+        // const obj = {
+        //     foo: () => super.foo
+        // };
+        // console.log(obj.foo);
+
+        //
+        // // 报错
+        // const obj = {
+        //     foo: function () {
+        //         return super.foo
+        //     }
+        // };
+        // console.log(obj.foo());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

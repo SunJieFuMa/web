@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的扩展</title>
+    <script>
+        // "use strict";
+        //  function log(x, y = 'World') {
+        //      console.log(x, y);
+        //  }
+        //  log();  // undefined World
+        //  log("Hello!"); // Hello! World
+        //
+        //
+        //  function Point(x = 0, y = 0) {
+        //      this.x = x;
+        //      this.y = y;
+        //  }
+        //  const p = new Point();
+        // console.log(p);
+
+        // function log(x, x, y) {
+        //     console.log(x, x, y);
+        // }
+        //
+        // log("1", "2", "3");  // 2 2 3
+        //
+        // function log2(x, x, y=3) {
+        //     console.log(x, x, y);
+        // }
+        //
+        // log("1", "2", "3");
+
+        // function test({x, y = 2}) {
+        //     console.log(x, y);
+        // }
+        //
+        // test({});   // undefined 2
+        // test({x: 1}); // 1  2
+        // test({x: 1, y: 5}); // 1  5
+        // test();
+
+        // function test({x, y = 5} = {}) {
+        //     console.log(x, y);
+        // }
+        //
+        // test() // undefined 5
+
+        // function test(a, ...b) {
+        //     console.log(a, b);
+        // }
+        //
+        // test(1, 2, 3, 4, 5);  // 1 (4) [2, 3, 4, 5]
+
+        // "use strict";
+        // a = 100;
+        // console.log(a);
+
+        // function test() {
+        // }
+        //
+        // console.log(test.name); // test
+        // console.log(function () {
+        //
+        // }.name);
+
+        // let amount = function (a, b) {
+        //     return a + b;
+        // };
+        // console.log(amount(1, 2)); // 3
+        //
+        // let amount = (a, b) => a + b;
+        // console.log(amount(1, 2));    // 3
+
+
+        // var f = () => 5;
+        // // 等同于
+        // var f = function () { return 5 };
+        //
+        // var sum = (num1, num2) => num1 + num2;
+        // // 等同于
+        // var sum = function(num1, num2) {
+        //     return num1 + num2;
+        // };
+
+        let sum = (num1, num2) => { return num1 + num2; }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
