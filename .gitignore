@@ -13,3 +13,4 @@ release
 debug
 ignore
 output.json
+node_modules
