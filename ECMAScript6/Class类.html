@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class类</title>
+    <script>
+        // function Dog(name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        //
+        // Dog.prototype.toString = function () {
+        //     return '(' + this.name + ', ' + this.age + ')';
+        // };
+        // let dog = new Dog("大黄", 3);
+        // console.log(dog.toString()); // (大黄, 3)
+        //
+        //
+        // class Cat {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        //     toString() {
+        //         return '(' + this.name + ', ' + this.age + ')';
+        //     }
+        // }
+        //
+        // let cat = new Cat("橘胖", 2);
+        // console.log(cat.toString());  // (橘胖, 2)
+
+        // class Cat {
+        //
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        //
+        //     getName() {
+        //         return this.name;
+        //     }
+        //
+        //     getAge() {
+        //         return this.age;
+        //     }
+        //
+        //     toString() {
+        //         return '(' + this.name + ', ' + this.age + ')';
+        //     }
+        // }
+        //
+        // let cat = new Cat("橘胖", 2);
+        // console.log(cat.hasOwnProperty('name')); // true
+        // console.log(cat.hasOwnProperty('age'));  // true
+        // console.log(cat.hasOwnProperty('getName')); // false
+
+        // let Cat = class InnnerCat {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        //
+        //     getClassName() {
+        //         return InnnerCat.name;
+        //     }
+        // };
+        // let cat = new Cat("橘胖", 2);
+        // console.log(cat.getClassName()); // InnnerCat
+
+        // class Cat {
+        //     constructor(name, age) {
+        //         this._name = name;
+        //         this._age = age;
+        //     }
+        //
+        //     get age() {
+        //         return this._age;
+        //     }
+        //
+        //     set age(value) {
+        //         this._age = value * 2;
+        //     }
+        // }
+        //
+        // let cat = new Cat();
+        // cat.age=123;
+        // console.log(cat.age); // 246
+        // console.log(cat.age());
+
+        // class Cat {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        //
+        //     static getName() {
+        //         return this.name;
+        //     }
+        //
+        //     getName() {
+        //         return this.name;
+        //     }
+        // }
+        //
+        // let cat = new Cat("橘胖");
+        // console.log(cat.getName()); // 橘胖
+        // console.log(Cat.getName()) // Cat
+
+        //
+        // class Cat{}
+        // Cat.commonHobby="毛线球";
+        // console.log(Cat.commonHobby); // 毛线球
+        //
+        // class Dog {
+        //     static commonHobby = "泥潭";
+        //     name = "橘胖";
+        //     age;
+        //     constructor(age) {
+        //         this.age = age;
+        //     }
+        // }
+
+        // let cat = new Cat(12);
+        // console.log(cat.name);
+        // console.log(cat.age);
+        // console.log(Cat.commonHobby);
+
+        class Animal {
+            constructor() {
+                this.feature = "会动";
+            }
+
+            static getName() {
+                return "XXXX"
+            }
+
+            toString() {
+                return this.feature
+            }
+        }
+
+        class Cat extends Animal {
+            constructor() {
+                super();
+                this.feature = "毛线球";
+            }
+
+            toString() {
+                return this.feature + ' ' + super.toString(); // 调用父类的toString()
+            }
+
+            static getFatherName() {
+                return super.getName();
+            }
+        }
+
+        let cat = new Cat();
+        console.log(cat.feature);
+        console.log(cat.toString());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
