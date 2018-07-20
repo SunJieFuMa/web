@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FirstUsedReact</title>
+    <script src="http://fb.me/react-0.12.1.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+    <style>
+        h1{
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<div id="a">123</div>
+<div id="b">456</div>
+<script type="text/jsx">
+    React.render(<h1>我就是我</h1>, document.getElementById('a'));
+    React.render(<h1>我就是我</h1>, document.getElementById('b'));
+</script>
+</body>
+</html>

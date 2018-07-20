@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React和ReactDOM</title>
+    <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <style>
+        h1{
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<div id="a">123</div>
+<div id="b">456</div>
+<script type="text/babel">
+    ReactDOM.render(<h1>我就是我</h1>, document.getElementById('a'));
+    ReactDOM.render(<h1>我就是我</h1>, document.getElementById('b'));
+</script>
+</body>
+</html>
