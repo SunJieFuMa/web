@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <title>数组Array</title>
     <script>
-        var num = 0;
-        var arr = [1, "", undefined, NaN, new Array(3), false, num];
-        for (let i = 0; i < arr.length; i++) {
-            console.log(arr[i])
-            num = num + i;
-        }
+        // var num = 0;
+        // var arr = [1, "", undefined, NaN, new Array(3), false, num];
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i])
+        //     num = num + i;
+        // }
         // for (let index in arr) {
         //     console.log(arr[index])
         // }
+        var numbers = [65, 44, 12, 4];
+
+        function getSum(total, num) {
+            console.log(total + "          " + num);
+            return total + num;
+        }
+
+        console.log(numbers.reduce(getSum));
     </script>
 </head>
 <body>
