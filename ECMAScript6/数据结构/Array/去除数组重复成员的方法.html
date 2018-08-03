@@ -14,6 +14,14 @@
     // 2
     // 3
 
+    // Array.from方法可以将 Set 结构转为数组。
+    const set = new Set([1, 2, 3, 4, 5]);
+    const arr = Array.from(set);
+
+    // 去除数组重复成员的另一种方法
+    let arrays=[1,2,1,2,1,2];
+    arrays=Array.from(new Set(arrays));
+    console.log(arrays.length) // 2
 </script>
 </body>
 </html>
