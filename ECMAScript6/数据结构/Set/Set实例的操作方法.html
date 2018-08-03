@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set实例的操作方法</title>
+</head>
+<body>
+<script>
+    let set = new Set([1]);
+    set.add('a');
+    set.add(3.1415);
+    set.add(NaN);
+    set.add(undefined);
+    set.add(() => {
+    });
+    set.add({});
+    console.log(set.size); // 7
+    set.delete({}); // 不是同一个对象
+    set.delete(undefined); // underfine能放也能删
+    console.log(set.size); // 6
+    console.log(set.has('1')); // false 类型不同，内部用的是===
+    console.log(set.has(1)); // true
+    set.clear();
+    console.log(set.size);  // 0
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set实例的遍历方法</title>
+</head>
+<body>
+<script>
+    let set = new Set(['red', 'green', 'blue']);
+
+    for (let item of set.keys()) {
+        console.log(item);
+    }
+    // red
+    // green
+    // blue
+
+    for (let item of set.values()) {
+        console.log(item);
+    }
+    // red
+    // green
+    // blue
+
+    for (let item of set.entries()) {
+        console.log(item);
+    }
+    // Array [ "red", "red" ]
+    // Array [ "green", "green" ]
+    // Array [ "blue", "blue" ]
+
+    for (let item of set) {
+        console.log(item);
+    }
+    // red
+    // green
+    // blue
+
+    set.forEach(function (value, key) {
+        console.log(value + "   " + key);
+    });
+    // red   red
+    // green   green
+    // blue   blue
+
+    for (let i = 0; i < set.size; i++) {
+        console.log(set[i]);
+    }
+    // undefined
+    // undefined
+    // undefined
+
+    console.log([...set]); // Array(3) [ "red", "green", "blue" ]
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set内部判断两个值相等</title>
+</head>
+<body>
+<script>
+    let set = new Set();
+    let a = NaN;
+    let b = NaN;
+    set.add(a);
+    set.add(b);
+    console.log(set.size);  // 1
+</script>
+</body>
+</html>

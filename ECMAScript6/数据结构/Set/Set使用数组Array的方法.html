@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set使用数组Array的方法</title>
+</head>
+<body>
+<script>
+    let set = new Set([1, 2, 3]);
+    set = new Set([...set].map(function (value) {
+        return value * 2;
+    }));
+    console.log(set);
+    // 返回Set结构：Set(3) {2, 4, 6}
+
+    let set2 = new Set([1, 2, 3, 4, 5]);
+    set2 = new Set([...set2].filter(function (value) {
+        if (value % 2 === 0) {
+            return true;
+        }
+    }));
+    console.log(set2);
+    // 返回Set结构：Set(2) {2, 4}
+</script>
+</body>
+</html>

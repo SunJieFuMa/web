@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set获取并集、交集、差集</title>
+</head>
+<body>
+<script>
+    let aSet = new Set([1, 2, 3]);
+    let bSet = new Set([4, 3, 2]);
+
+    // 并集
+    let union = new Set([...aSet, ...bSet]);
+    console.log(union);
+    // Set {1, 2, 3, 4}
+
+    // 交集
+    let intersect = new Set([...aSet].filter(function (value) {
+        if (bSet.has(value)) {
+            return true;
+        }
+    }));
+    console.log(intersect);
+    // set {2, 3}
+
+    // 差集
+    let difference = new Set([...aSet].filter(function (value) {
+        if (!bSet.has(value)) {
+            return true;
+        }
+    }));
+    console.log(difference)
+    // Set {1}
+</script>
+</body>
+</html>
