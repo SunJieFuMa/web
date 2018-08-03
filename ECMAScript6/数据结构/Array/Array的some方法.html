@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array的some方法</title>
+</head>
+<body>
+<script>
+    let arr = ['张飞', '吕布', '曹操', '赵子龙', '关羽', '刘备', '孙权'];
+    let boo = arr.some(function (value, index, array) {
+        console.log(value);
+        if (value === '赵子龙') {
+            return true
+        }
+    });
+    if (boo) {
+        console.log("千里走单骑的人找到了")
+    }
+
+</script>
+</body>
+</html>

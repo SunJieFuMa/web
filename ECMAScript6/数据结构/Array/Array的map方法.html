@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array的map方法</title>
+</head>
+<body>
+<script>
+    let arr = ['张飞', '吕布', '曹操', '关羽', '刘备', '孙权'];
+    let newArr = arr.map(function (value, index, array) {
+        if (value === '张飞') {
+            return "三弟:" + value
+        } else if (value === '关羽') {
+            return "二哥:" + value
+        } else if (value === '刘备') {
+            return "大哥:" + value
+        }
+    });
+    console.log(newArr);
+    //  ["三弟:张飞", undefined, undefined, "二哥:关羽", "大哥:刘备", undefined]
+</script>
+</body>
+</html>

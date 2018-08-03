@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array的every方法</title>
+</head>
+<body>
+<script>
+    let arr = ['张飞', '吕布', '曹操', '关羽', '刘备', '孙权'];
+    let peach_orchard_brother = [];
+    let boo = arr.every(function (value, index, array) {
+        if (value === '张飞' || value === '关羽' || value === '刘备') {
+            peach_orchard_brother.push(value);
+            return true
+        }
+        return false
+    });
+    if (!boo) {
+        console.log("刘关张三兄弟中混入了其它人")
+    }
+    console.log(peach_orchard_brother);
+    // ["张飞"]
+
+</script>
+</body>
+</html>
