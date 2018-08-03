@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去除数组重复成员的方法.</title>
+</head>
+<body>
+<script>
+    let array = [2, 3, 2, 3, 2, 3, 2, 3];
+    array = [... new Set(array)];
+    for (let value of  array) {
+        console.log(value);
+    }
+    // 2
+    // 3
+
+</script>
+</body>
+</html>
