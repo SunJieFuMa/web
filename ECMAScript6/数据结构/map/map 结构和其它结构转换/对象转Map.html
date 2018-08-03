@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象转Map</title>
+</head>
+<body>
+<script>
+    function objToStrMap(obj) {
+        let strMap = new Map();
+        for (let k of Object.keys(obj)) {
+            strMap.set(k, obj[k]);
+        }
+        return strMap;
+    }
+
+   console.log( objToStrMap({yes: true, no: false}));
+    //  Map(2) {"yes" => true, "no" => false}
+</script>
+</body>
+</html>

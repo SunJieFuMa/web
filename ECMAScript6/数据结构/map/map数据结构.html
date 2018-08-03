@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map数据结构</title>
+</head>
+<body>
+<div id="myDiv"></div>
+<script>
+    const data = {};
+    const element = document.getElementById('myDiv');
+
+    data[element] = 'metadata';
+    console.log(data);  // {[object HTMLDivElement]: "metadata"}
+    console.log(data['[object HTMLDivElement]']); // metadata
+
+    let map = new Map();
+    const obj = {p: 'Hello World'};
+    map.set(obj, 'content');
+    console.log(map.get(obj)); // "content"
+
+</script>
+</body>
+</html>

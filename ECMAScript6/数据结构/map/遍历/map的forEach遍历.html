@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map的forEach遍历</title>
+</head>
+<body>
+<script>
+    const map = new Map([
+        ['android', '陈'],
+        ['ios', '辛'],
+    ]);
+
+    map.forEach(function (value, key, map) {
+        console.log("Key: " + key + "   value:" + value);
+    });
+
+    // Key: android   value:陈
+    // Key: ios   value:辛
+
+
+    map.forEach(function (value, key, map) {
+        console.log("Key: %s  Value: %s", key, value);
+    });
+    map.forEach(function (value, key, map) {
+        console.log(`key: ${key}` + `    value: ${value}`)
+    });
+    //   陈
+    //   辛
+
+
+    const map2 = new Map([
+        ['android', '陈'],
+        ['ios', '辛'],
+    ]);
+
+    let obj = {
+        test: function (ele1, ele2) {
+            console.log("Key: %s  Value: %s", ele1, ele2);
+        }
+    };
+
+    map2.forEach(function (value, key, map) {
+        this.test(key, value);
+    }, obj);
+
+    // Key: android  Value: 陈
+    // Key: ios  Value: 辛
+
+</script>
+</body>
+</html>

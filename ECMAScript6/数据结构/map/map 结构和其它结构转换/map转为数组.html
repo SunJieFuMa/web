@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map转为数组</title>
+</head>
+<body>
+<script>
+    let map = new Map();
+    map.set('android', '陈')
+        .set('iod', '辛')
+        .set('H5', '杨');
+
+    console.log([...map.keys()]); //["android", "iod", "H5"]
+    console.log([...map.values()]); // ["android", "iod", "H5"]
+    console.log([...map.entries()]); // [ ["android", "陈"],["iod", "辛"],["H5", "杨"]]
+    console.log([...map]);  // [ ["android", "陈"],["iod", "辛"],["H5", "杨"]]
+
+    let map2 = new Map();
+    map2.set(31, '陈')
+        .set(21, '辛')
+        .set(25, '杨');
+    let newMap = new Map([...map2].filter(function ([key, value]) {
+        return key > 30;
+    }));
+    console.log(newMap);  // Map(1) {31 => "陈"}
+
+
+</script>
+</body>
+</html>

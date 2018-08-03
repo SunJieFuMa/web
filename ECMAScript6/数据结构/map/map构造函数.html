@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map构造函数</title>
+</head>
+<body>
+<script>
+    const map = new Map([['name', '张三'], ['title', 'Author']]);
+    console.log(map); // Map(2) {"name" => "张三", "title" => "Author"}
+    console.log(map.has('name'));// true
+    console.log(map.get('name')); // "张三"
+    console.log(map.has('title')); // true
+    console.log(map.get('title')); // "Author
+
+    // const map2 = new Map([123, 'aaa']); // Iterator value 123 is not an entry object
+    // console.log(map2);
+
+    const items = [
+        ['name', '张三'],
+        ['title', 'Author']
+    ];
+
+    const map3 = new Map();
+    items.forEach(
+        ([ele1, ele2]) => map3.set(ele1, ele2)
+    );
+    console.log(map3);  // Map(2) {"name" => "张三", "title" => "Author"}
+
+
+    const set = new Set([['foo', 1], ['bar', 2]]);
+    const m1 = new Map(set);
+    console.log(m1);  // Map(2) {"foo" => 1, "bar" => 2}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map的keys遍历</title>
+</head>
+<body>
+<script>
+    const map = new Map([
+        ['android', '陈'],
+        ['ios', '辛'],
+    ]);
+
+    for (let key of map.keys()) {
+        console.log(key + '  ' + map.get(key));
+    }
+    // android  陈
+    // ios  辛
+</script>
+</body>
+</html>

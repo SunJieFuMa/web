@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map转为对象</title>
+</head>
+<body>
+<script>
+    function mapToObj(map) {
+        let obj = Object.create(null);
+        for (let [key, value] of map) {
+            obj[key] = value;
+        }
+        return obj;
+    }
+
+    let map = new Map();
+    map.set('android', '陈')
+        .set('iod', '辛')
+        .set('H5', '杨');
+    console.log(mapToObj(map)); // {android: "陈", iod: "辛", H5: "杨"}
+
+
+</script>
+</body>
+</html>

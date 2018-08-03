@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map的values遍历</title>
+</head>
+<body>
+<script>
+    const map = new Map([
+        ['android', '陈'],
+        ['ios', '辛'],
+    ]);
+
+    for (let value of map.values()) {
+        console.log(value);
+    }
+    //   陈
+    //   辛
+</script>
+</body>
+</html>
