@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for_in循环</title>
+</head>
+<body>
+<script>
+    const array = [2, 3, 5, 4, 5, 2, 2];
+    for (let index in array) {
+        // continue 如果等于2 ，跳出本次循环，进入下次循环
+        if (array[index] === 2) {
+            continue
+        }
+        // break  如果等于4 打断循环
+        if (array[index] === 4) {
+            break
+        }
+        console.log(array[index]);
+
+    }
+</script>
+</body>
+</html>

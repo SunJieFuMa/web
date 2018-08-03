@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for_of循环</title>
+</head>
+<body>
+<script>
+    const array = [2, 3, 5, 4, 5, 2, 2];
+    for (let value of array) {
+        // continue 如果等于2 ，跳出本次循环，进入下次循环
+        if (value === 2) {
+            continue
+        }
+        // break  如果等于4 打断循环
+        if (value === 4) {
+            break
+        }
+        console.log(value);
+    }
+
+    // 循环一个数组(Array)
+    const arr = ['a', 'b', 'c'];
+    for (let value of arr) {
+        console.log(value);
+    }
+    // a
+    // b
+    // c
+
+    // 循环一个 Set
+    let set = new Set([1, 1, 2, 2, 3, 3]);
+
+    for (let value of set) {
+        console.log(value);
+    }
+    // 1
+    // 2
+    // 3
+
+    // 循环一个Map
+    let map = new Map([["a", 1], ["b", 2], ["c", 3]]);
+
+    for (let entry of map) {
+        console.log(entry);
+    }
+    // [a, 1]
+    // [b, 2]
+    // [c, 3]
+
+    for (let [key, value] of map) {
+        console.log(key + "  " + value);
+    }
+    // a 1
+    // b 2
+    // c 3
+
+    // 循环一个字符串
+    let str = "boo";
+    for (let value of str) {
+        console.log(value);
+    }
+    // b
+    // o
+    // o
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array.forEach方法</title>
+</head>
+<body>
+<script>
+    let letters = ['ab', 'cd', 'ef'];
+    letters.forEach(function ShowResults(value, index, arr) {
+        document.write("value: " + value);
+        document.write(" index: " + index);
+        document.write("<br />");
+        console.log(arr);
+    });
+    letters.forEach(function ShowResults(value, index, arr) {
+        if (index === 0) {
+            // break;  //Illegal break statement
+        }
+    });
+
+</script>
+</body>
+</html>
