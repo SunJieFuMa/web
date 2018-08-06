@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol.for()方法</title>
+</head>
+<body>
+<script>
+    let sf1 = Symbol.for('foo');
+    let sf2 = Symbol.for('foo');
+    console.log(sf1 === sf2); // true
+
+
+    let s1= Symbol('foo');
+    let s2 = Symbol('foo');
+    console.log(s1 === s2); // false
+</script>
+</body>
+</html>

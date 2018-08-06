@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol函数的参数为对象</title>
+</head>
+<body>
+<script>
+
+
+    let obj = {
+        toString: function () {
+            return 'XXX';
+        }
+    };
+    let c = Symbol(obj);
+    let d = Symbol(obj);
+    console.log(c);
+    console.log(d);
+
+</script>
+</body>
+</html>

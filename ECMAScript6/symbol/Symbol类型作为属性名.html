@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol类型作为属性名</title>
+</head>
+<body>
+<script>
+    let mySymbol = Symbol();
+
+    // 第一种写法
+    let a = {};
+    a[mySymbol] = 'Hello!';
+
+    // 第二种写法
+    let b = {
+        [mySymbol]: 'Hello!',
+        mySymbol: 123
+    };
+
+    // 第三种写法
+    let c = {};
+    Object.defineProperty(c, mySymbol, {value: 'Hello!'});
+
+    console.log(a[mySymbol]); // "Hello!"
+    console.log(a.mySymbol); // underfined
+    console.log(b[mySymbol]); // "Hello!"
+    console.log(b.mySymbol); // 123
+    console.log(c[mySymbol]); // "Hello!"
+</script>
+</body>
+</html>
