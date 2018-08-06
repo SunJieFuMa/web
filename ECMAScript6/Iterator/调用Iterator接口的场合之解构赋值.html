@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调用Iterator接口的场合之解构赋值</title>
+</head>
+<body>
+<script>
+    let arr = ['a', 'b', 'c', 'd'];
+    let [x, y] = arr;
+    console.log(x, y); // a b
+    let [a, ...b] = arr;
+    console.log(a, b); // a  ["b", "c", "d"]
+
+</script>
+</body>
+</html>

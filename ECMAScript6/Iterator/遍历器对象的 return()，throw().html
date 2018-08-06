@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历器对象的 return()，throw()</title>
+</head>
+<body>
+<script>
+    function readLinesSync(file) {
+        return {
+            [Symbol.iterator]() {
+                return {
+                    next() {
+                        return {done: false};
+                    },
+                    return() {
+                        console.log('触发retrn方法');
+                        // file.close(); 做关闭流的操作。。
+                        return {done: true};
+                    }
+                };
+            },
+        };
+    }
+
+    // 情况一
+    for (let line of readLinesSync()) {
+        console.log(line);
+        break;
+    }
+
+    // 情况二
+    for (let line of readLinesSync()) {
+        console.log(line);
+        throw new Error();
+    }
+</script>
+</body>
+</html>
