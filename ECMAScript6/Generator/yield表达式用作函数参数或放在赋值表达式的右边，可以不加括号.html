@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yield表达式用作函数参数或放在赋值表达式的右边，可以不加括号</title>
+</head>
+<body>
+<script>
+    function foo(a, b) {
+        console.log("foo函数   " + a + "  " + b);
+        return a + b
+    }
+
+    function* gen() {
+        foo(yield 'a', yield 'b'); // OK
+        let input = yield; // OK
+    }
+
+    let test = gen();
+    console.log(test.next());
+    console.log(test.next());
+    console.log(test.next());
+
+</script>
+</body>
+</html>

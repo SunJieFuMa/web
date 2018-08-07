@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator函数</title>
+</head>
+<body>
+<script>
+    function* helloWorldGenerator() {
+        yield 'hello';
+        yield 'world';
+        return 'ending';
+    }
+
+    let iterator = helloWorldGenerator();
+    console.log(iterator); // helloWorldGenerator {<suspended>}
+    console.log(iterator.next()); // {value: "hello", done: false}
+    console.log(iterator.next()); // {value: "world", done: false}
+    console.log(iterator.next()); // {value: "ending", done: true}
+    console.log(iterator.next()); // {value: undefined, done: true}
+    console.log(iterator.next()); // {value: undefined, done: true}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator函数星号的位置</title>
+</head>
+<body>
+<script>
+    function*gen1() {yield 'gen1'}
+    function* gen2() {yield 'gen2'}
+    function * gen3() {yield 'gen3'}
+    function *gen4() {yield 'gen4'}
+
+    let test=gen1();
+    console.log(test.next());
+    console.log(test.next());
+    console.log(test.next());
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator 函数执行后，返回一个遍历器对象。该对象本身也具有Symbol.iterator属性，执行后返回自身</title>
+</head>
+<body>
+<script>
+    function* gen() {
+    }
+    let g = gen();
+
+    console.log(g[Symbol.iterator]() === g); // true
+
+</script>
+</body>
+</html>

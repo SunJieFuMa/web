@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>next方法的参数</title>
+</head>
+<body>
+<script>
+    function* gen() {
+        for (let i = 0; true; i++) {
+            console.log('for循环 ' + i);
+            let reset = yield i;
+            console.log('for循环 ' + reset);
+            if (reset) {
+                i = -100;
+            }
+        }
+    }
+
+    let g = gen();
+
+    console.log(g.next()); // { value: 0, done: false }
+    console.log(g.next()); // { value: 1, done: false }
+    console.log(g.next(true)); // {value: -99, done: false}
+</script>
+</body>
+</html>
