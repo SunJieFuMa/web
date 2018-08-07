@@ -2,27 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>throw</title>
+    <title>Generator 函数返回的遍历器对象的throw方法</title>
 </head>
 <body>
 <script>
-    function* gen() {
+    let gen = function* () {
         try {
-            yield;
+            yield 123;
+            yield 456;
         } catch (e) {
             console.log('内部捕获', e);
         }
-    }
+
+    };
 
     let it = gen();
-    it.next();
+    console.log(it.next()); // {value: 123, done: false}
+
 
     try {
         it.throw('a');
+        console.log(it.next()); // {value: undefined, done: true}
         it.throw('b');
     } catch (e) {
         console.log('外部捕获', e);
     }
+
+    // 内部捕获 a
+    // 外部捕获 b
 </script>
 </body>
 </html>

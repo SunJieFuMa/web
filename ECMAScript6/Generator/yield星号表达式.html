@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yield星号表达式</title>
+</head>
+<body>
+<script>
+    function* foo() {
+        console.log('执行到了');
+        yield 'a';
+        yield 'b';
+    }
+
+    function* bar() {
+        yield 'x';
+        foo();
+        yield 'y';
+    }
+
+    let b = bar();
+    console.log(b.next());
+    console.log(b.next());
+    // {value: "x", done: false}
+    // {value: "y", done: false}
+
+
+    function* gen() {
+        console.log('执行到了');
+        yield 'a';
+        yield 'b';
+    }
+
+    function* exc() {
+        yield 'x';
+        // yield gen();
+        yield* gen();
+        yield 'y';
+    }
+
+    let e = exc();
+    console.log(e.next());
+    console.log(e.next());
+    // {value: "x", done: false}
+    // 执行到了
+    // {value: "a", done: false}
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator 函数返回的遍历器对象的return方法</title>
+</head>
+<body>
+<script>
+    function* gen() {
+        yield 1;
+        yield 2;
+        yield 3;
+    }
+
+    let it = gen();
+
+    console.log(it.next());        // { value: 1, done: false }
+    console.log(it.return('foo'));     // { value: "foo", done: true }
+    console.log(it.next());        // { value: undefined, done: true }
+
+    function* numbers() {
+        yield 1;
+        try {
+            yield 2;
+            yield 3;
+        } finally {
+            yield 4;
+            yield 5;
+        }
+        yield 6;
+    }
+
+    let num = numbers();
+    console.log(num.next()); // { value: 1, done: false }
+    console.log(num.next()); // { value: 2, done: false }
+    console.log(num.return(7));// { value: 4, done: false }
+    console.log(num.next()); // { value: 5, done: false }
+    console.log(num.next());// { value: 7, done: true }
+</script>
+</body>
+</html>

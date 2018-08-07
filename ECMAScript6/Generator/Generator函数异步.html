@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator函数异步</title>
+</head>
+<body>
+<script>
+    function* gen(x) {
+        let y = yield x + 2;
+        return y;
+    }
+
+    let g = gen(1);
+    console.log(g.next());// { value: 3, done: false }
+    console.log(g.next(2)); // { value: 2, done: true }
+
+
+</script>
+</body>
+</html>
