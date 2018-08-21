@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>left和marginleft的区别</title>
+</head>
+<body>
+
+
+
+
+
+<div style="position:relative;top:100px;left:100px;border:1px solid blue;width:100px;height:100px;">
+    <div id="outer"
+         style="position:relative;margin-top:25px;margin-left:25px;width:50px;height:50px;border:1px solid red;">
+        <div id="inner"
+             style="position:absolute;left:15px;top:15px;width:25px;height:25px;border:1px solid green;">
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div style="position:relative;top:100px;left:100px;border:1px solid blue;width:100px;height:100px;">
+    <div id="outer2"
+         style="margin-top:25px;margin-left:25px;width:50px;height:50px;border:1px solid red;">
+        <div id="inner2"
+             style="position:absolute;left:15px;top:15px;width:25px;height:25px;border:1px solid green;">
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div style="position:relative;top:100px;left:100px;border:1px solid blue;width:100px;height:100px;">
+    <div id="outer3"
+         style="margin-top:25px;margin-left:25px;width:50px;height:50px;border:1px solid red;">
+        <div id="inner3"
+             style="position:absolute;margin-left:15px;top:15px;width:25px;height:25px;border:1px solid green;">
+        </div>
+    </div>
+</div>
+<br>
+
+<div style="
+        position:relative;
+        width:198px;
+        height:133px;
+        background-image:
+        url('img/screen.jpg');
+        margin-left:100px;
+        margin-top:100px;">
+    <img style="position:absolute;top:-20px;right:-20px;width:40px;height:40px;" src="img/add_adress.png"/>
+</div>
+
+<div style="
+        position:relative;
+        width:198px;
+        height:133px;
+        background-image:
+        url('img/screen.jpg');
+        margin-left:100px;
+        margin-top:100px;">
+    <img style="position:absolute;margin-top:-20px;margin-right:-20px;width:40px;height:40px;" src="img/add_adress.png"/>
+</div>
+
+</body>
+</html>
